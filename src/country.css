@@ -1,0 +1,200 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(to right, #02612d, #a78a09);
+    height: 100%;
+}
+
+/* Header styling */
+header {
+    background-color: #025528;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.2em; /* Match the font size */
+}
+
+/* Home button styling */
+.home-button {
+    position: absolute;
+    left: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em; /* Font size match */
+}
+
+.home-button:hover {
+    color: #e0e0e0;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.country-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    min-width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.country {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.country:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.country img {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.country span {
+    font-size: 0.9em; /* Match font size */
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Navigation Button */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 8px;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-size: 1.5em; /* Match font size */
+    color: #025528;
+}
+
+.modal-content p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+#modalFlag {
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+    background-color: #025528;
+    color: white;
+    text-align: center;
+    bottom: 0; /* Align at the bottom */
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

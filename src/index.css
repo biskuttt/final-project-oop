@@ -1,0 +1,283 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:  #628d4a;
+  font-family: 'Montserrat', sans-serif; /* Default font */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #025528;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+
+/* Wrapper Section */
+.wrapper {
+  background: linear-gradient(to bottom, #02612d, #a78a09); /* Gradient background */
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  animation: backgroundChange 2s infinite;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1; /* Always visible */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.content h1 {
+  font-size: 45px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 19px;
+  color: #ffffff;
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  margin-top: 20px; /* Space from the top */
+  width: 100%; /* Set width to 100% of parent */
+}
+
+
+#countryInput {
+  padding: 10px;
+  border: 2px solid #4D4D4D; /* Dark gray border */
+  border-radius: 5px; /* Rounded corners */
+  width: 250px; /* Set a width for the input */
+  margin-right: 10px; /* Space between input and button */
+}
+
+/* Button Styles */
+button {
+  padding: 15px 20px;
+  background-color: #025528;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: grey; /* Change background color on hover */
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space above the buttons */
+  margin-bottom: 30px; /* Add margin-bottom for gap */
+}
+
+.button-container button {
+  margin: 0 10px; /* Space between buttons */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Button font size */
+  background-color: #025528;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Maximum width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+    background-color: #025528; /* Light blue background */
+    color: white; /* Dark text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding for spacing */
+    position: relative; /* Ensure it stays at the bottom of the content */
+    bottom: 0; /* Align at the bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Font size */
+}
+
+footer a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+/* Card Section Styling */
+.card-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.card-section h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+  background-color: #9de787;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 0.9em;
+  color: #666;
+}
+/* Currency Converter Box Styling */
+.currency-converter-box {
+  background-color: #9de787;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto; /* Center the box */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.currency-converter-box:hover {
+  transform: translateY(-5px); /* Hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.currency-converter-box h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.currency-converter-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.currency-converter-box label {
+  font-size: 1em;
+  color: #666;
+}
+
+.currency-converter-box input,
+.currency-converter-box select,
+.currency-converter-box button {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #025528;
+  border-radius: 5px;
+}
+
+.currency-converter-box button {
+  background-color: #025528;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.currency-converter-box button:hover {
+  background-color: grey;
+}

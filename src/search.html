@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="search.css" />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+  </head>
+  <header>gogo</header>
+  
+  <br>
+  <br>
+  <body>
+    <h1>🌎 Exploring the World!</h1>
+    <p>Welcome to the World Explorer page.</p>
+
+    
+    <input type="text" id="countryInput" placeholder="Country name" />
+    <button onclick="buttonclick()">Enter</button>
+
+    <!-- Country information and links -->
+    <br />
+    <label>Country Name:</label>
+    <p id="countryDisplay"></p>
+
+    <!-- Map Links -->
+    <div id="mapLinks" style="display: none;">
+      <a id="googleMapsLink" target="_blank">Google Maps</a> |
+      <a id="openStreetMapsLink" target="_blank">OpenStreetMap</a>
+    </div>
+
+    <!-- Map container -->
+    <div id="map" style="height: 400px; width: 80%; margin-top: 20px;"></div>
+
+    <script src="main.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </body>
+</html>
